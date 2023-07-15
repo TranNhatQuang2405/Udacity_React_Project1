@@ -8,7 +8,7 @@ function Book({ bookInfo, handleChangeShelf = () => { } }) {
 
     const getAuthorString = () => {
         if (bookInfo.authors)
-            return bookInfo.authors.join("\n")
+            return bookInfo.authors.join(", ")
     }
 
     const onChangeShelf = async (event) => {
