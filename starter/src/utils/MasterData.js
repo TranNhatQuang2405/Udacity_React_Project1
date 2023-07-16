@@ -1,4 +1,6 @@
 
+export const shelfNone = 'none'
+
 export const shelves = [
     {
         isShow: true,

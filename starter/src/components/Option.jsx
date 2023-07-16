@@ -1,5 +1,6 @@
 import React from 'react'
 import { shelves } from 'utils/MasterData'
+import { shelfNone } from 'utils/MasterData'
 
 function Option({ bookShelf, onChangeShelf }) {
 
@@ -7,9 +8,9 @@ function Option({ bookShelf, onChangeShelf }) {
         <div className="book-shelf-changer">
             <select value={bookShelf} onChange={onChangeShelf}>
                 {
-                    bookShelf.shelf !== "none" ?
+                    bookShelf !== shelfNone ?
                         <>
-                            <option value="none" disabled>
+                            <option value="default" disabled>
                                 Move to...
                             </option>
                             {

@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import Option from './Option'
 import { update } from 'BooksAPI'
+import { shelfNone } from 'utils/MasterData'
 
 function Book({ bookInfo, handleChangeShelf = () => { } }) {
 
-    const [shelf, setShelf] = useState(bookInfo.shelf)
+    const [shelf, setShelf] = useState(bookInfo.shelf || shelfNone)
 
     const getAuthorString = () => {
         if (bookInfo.authors)
